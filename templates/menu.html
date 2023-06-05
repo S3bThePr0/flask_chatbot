@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta charset="UTF-8" />
+      <title>SebThePro chatbot</title>
+      <link
+         rel="stylesheet"
+         href="{{ url_for('static', filename='css/menu.css')
+      }}"
+      />
+      <script src="{{ url_for('static', filename='script/menu.js') }}"></script>
+   </head>
+   <body>
+      <div id="create-chat-container">
+         <nav>
+            <h1>SebThePro chatbot</h1>
+         </nav>
+
+         <form
+            action="{{ url_for('chat') }}"
+            method="POST"
+            onsubmit="check_chat_name(event)"
+         >
+            <input
+               type="text"
+               class="chat-name"
+               placeholder="Insert chat name..."
+               required="true"
+               name="input-chat-name"
+            />
+            <button type="submit" class="send-button">Add</button>
+         </form>
+
+         <div id="chats-container"></div>
+      </div>
+
+      <footer>
+         <span
+            >SebThePro Web Design & Web development, copyrigth &copy;2023</span
+         >
+      </footer>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   </body>
+</html>

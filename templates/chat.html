@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>SebThePro chatbot</title>
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="{{ url_for('static', filename='css/style.css') }}"
+      />
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script
+         type="text/javascript"
+         src="{{ url_for('static', filename='script/script.js') }}"
+      ></script>
+   </head>
+   <body>
+      <h1>SebThePro {{ request.form.get['input-chat-name'] }}</h1>
+      <div id="chat-container">
+         <div id="chat-area"></div>
+         <div id="user-input">
+            <input
+               type="text"
+               id="user-input-field"
+               placeholder="Enter your message..."
+               autocomplete="off"
+            />
+            <button id="send-button" onclick="sendMessage()">Send</button>
+         </div>
+      </div>
+   </body>
+</html>
